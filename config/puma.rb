@@ -24,6 +24,7 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 # Specifies the `pidfile` that Puma will use.
 pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 
+
 ENV.fetch("WEB_CONCURRENCY") { 1 }.to_i.tap do |web_concurrency|
   # Specifies the number of `workers` to boot in clustered mode.
   # Workers are forked web server processes. If using threads and workers together
@@ -31,7 +32,8 @@ ENV.fetch("WEB_CONCURRENCY") { 1 }.to_i.tap do |web_concurrency|
   # Workers do not work on JRuby or Windows (both of which do not support
   # processes).
   #
-  workers web_concurrency
+  #workers web_concurrency
+  
 
   # Use the `preload_app!` method when specifying a `workers` number.
   # This directive tells Puma to first boot the application and load code
